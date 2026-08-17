@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+:root {
+  --size: 75%;
+}
+
+h1,
+h2 {
+  @apply py-2 text-center text-white flex gap-2 items-center w-full;
+}
+
+h1 {
+  @apply py-2 text-center bg-gray-700 text-white justify-center;
+}
+
+h2 {
+  @apply py-2 text-center bg-gray-500 text-white w-fit mx-auto p-4 my-2 rounded-lg justify-center;
+}
+
+h2#categories {
+  @apply grid grid-cols-3 w-(--size);
+}
+
+*[role="button"] {
+  @apply w-fit cursor-pointer bg-gray-300 text-black;
+}
+
+*[role="button"]:hover {
+  @apply w-fit bg-gray-700 text-white;
+  > span {
+    @apply text-white;
+  }
+}
+
+*[role="button"]:hover * {
+  @apply text-black;
+}
+
+.skeleton-vignette {
+  @apply h-37.5 w-75;
+}
+
+.skeleton-film {
+  @apply h-[80vh] w-[85%];
+}
+
+.skeleton {
+  @apply animate-pulse bg-gray-700;
+}
+
+.container-film-spec {
+  @apply h-[80vh] w-[85%] bg-gray-700;
+}
+
+.container-film {
+  @apply mx-auto flex mt-2 items-center justify-center p-4 rounded-lg gap-4;
+}
+
+.container {
+  @apply mx-auto grid grid-cols-4 w-[85%] mt-2 bg-gray-700 h-full p-4 rounded-lg gap-4;
+}
+
+.content-banner {
+  @apply grid grid-cols-5 gap-4 w-(--size) bg-gray-600 rounded-lg p-6 mx-auto;
+}
+
+.linker {
+  @apply relative bg-gray-700 rounded-lg text-white p-2 justify-self-center text-center my-auto;
+}
+
+.active {
+  @apply bg-green-500;
+}
+
+.banner {
+  @apply sticky top-0 left-0 cursor-pointer;
+}
+
+.intro {
+  @apply w-1/2 mx-auto rounded-lg p-2 bg-indigo-950 text-white mb-12;
+}
+
+.infobulle {
+  @apply absolute top-[calc(100%+0.5rem)] hidden italic min-w-96 w-[none] rounded-lg bg-indigo-950 text-white! p-1 z-10;
+}
+
+.infobulle.start {
+  @apply left-0;
+}
+
+.infobulle.end {
+  @apply right-0;
+}
+
+.linker:hover > .infobulle {
+  @apply flex;
+}
+
+body {
+  @apply min-w-screen min-h-screen bg-gray-900;
+}
+
+a:visited {
+  @apply bg-amber-400 text-black;
+}
+
+#seasons {
+  @apply mx-auto flex gap-4 items-center justify-center mt-8;
+}
